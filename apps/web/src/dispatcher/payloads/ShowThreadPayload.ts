@@ -17,6 +17,6 @@ export interface ShowThreadPayload extends ActionPayload {
     rootEvent: MatrixEvent;
     initialEvent?: MatrixEvent;
     highlighted?: boolean;
-    scrollIntoView?: boolean;
+    scroll_into_view?: boolean;
     push?: boolean;
 }

@@ -903,7 +903,7 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
                 void SettingsStore.setValue("pseudonymousAnalyticsOptIn", null, SettingLevel.ACCOUNT, false);
                 break;
             case Action.ShowThread: {
-                const { rootEvent, initialEvent, highlighted, scrollIntoView, push } = payload as ShowThreadPayload;
+                const { rootEvent, initialEvent, highlighted, scroll_into_view, push } = payload as ShowThreadPayload;
 
                 const threadViewCard = {
                     phase: RightPanelPhases.ThreadView,
@@ -911,7 +911,7 @@ export default class MatrixChat extends React.PureComponent<IProps, IState> {
                         threadHeadEvent: rootEvent,
                         initialEvent: initialEvent,
                         isInitialEventHighlighted: highlighted,
-                        initialEventScrollIntoView: scrollIntoView,
+                        initialEventScrollIntoView: scroll_into_view,
                     },
                 };
                 if (push ?? false) {
